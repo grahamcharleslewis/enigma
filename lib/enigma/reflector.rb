@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "mapping"
 
 class Reflector < Mapping
@@ -5,10 +7,9 @@ class Reflector < Mapping
     mappings = {
       A: "EJMZALYXVBWFCRQUONTSPIKHGD",
       B: "YRUHQSLDPXNGOKMIEBFZCWVJAT",
-      C: "FVPJIAOYEDRZXWGCTKUQSBNMHL",
+      C: "FVPJIAOYEDRZXWGCTKUQSBNMHL"
     }
 
     super(mappings, id)
-  end 
-end 
-
+  end
+end
