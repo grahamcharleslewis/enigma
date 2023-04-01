@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "mapping"
 
 class Rotor < Mapping
@@ -7,10 +9,9 @@ class Rotor < Mapping
       II: "AJDKSIRUXBLHWTMCQGZNPYFVOE",
       III: "BDFHJLCPRTXVZNYEIWGAKMUSQO",
       IV: "ESOVPZJAYQUIRHXLNFTGKDCMWB",
-      V: "VZBRGITYUPSDNHLXAWMJQOFECK",
+      V: "VZBRGITYUPSDNHLXAWMJQOFECK"
     }
 
-    super(mappings, id) 
-  end 
-end 
-
+    super(mappings, id)
+  end
+end
