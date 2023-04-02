@@ -8,11 +8,11 @@ class TestEnigma < Minitest::Test
     refute_nil ::Enigma::VERSION
   end
 
-  def test_it_encodes_and_decodes_hello
+  def test_it_transcodes_and_decodes_hello
     machine = Machine.new
     machine.configure(%w[I II III], "A")
-    encoded = machine.encode_string("Hello World, how are you?")
-    decoded = machine.encode_string(encoded)
+    encoded = machine.transcode_string("Hello World, how are you?")
+    decoded = machine.transcode_string(encoded)
     assert_equal "BCDDAVAKDLBAVOKCGAJ", encoded
     assert_equal "HELLOWORLDHOWAREYOU", decoded
   end

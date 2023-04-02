@@ -9,27 +9,27 @@ class TestMachine < Minitest::Test
     @machine.configure(%w[I II III], "A")
   end
 
-  def test_encode_char_uppercase
-    assert_equal "B", @machine.encode_char("H")
+  def test_transcode_character_uppercase
+    assert_equal "B", @machine.transcode_character("H")
   end
 
-  def test_encode_char_lowercase
-    assert_equal "B", @machine.encode_char("h")
+  def test_transcode_character_lowercase
+    assert_equal "B", @machine.transcode_character("h")
   end
 
-  def test_encode_string_uppercase
-    assert_equal "BCDDA", @machine.encode_string("HELLO")
+  def test_transcode_string_uppercase
+    assert_equal "BCDDA", @machine.transcode_string("HELLO")
   end
 
-  def test_encode_string_lowercase
-    assert_equal "BCDDA", @machine.encode_string("hello")
+  def test_transcode_string_lowercase
+    assert_equal "BCDDA", @machine.transcode_string("hello")
   end
 
-  def test_encode_string_with_whitespace
-    assert_equal "BCDDA", @machine.encode_string(" h e LL o ")
+  def test_transcode_string_with_whitespace
+    assert_equal "BCDDA", @machine.transcode_string(" h e LL o ")
   end
 
-  def test_encode_string_with_punctuation
-    assert_equal "BCDDA", @machine.encode_string(" ? / >.<, h |\\ e `¬¦ L!\"£L $%^o &*()_+-={}[]:@~;'#")
+  def test_transcode_string_with_punctuation
+    assert_equal "BCDDA", @machine.transcode_string(" ? / >.<, h |\\ e `¬¦ L!\"£L $%^o &*()_+-={}[]:@~;'#")
   end
 end
