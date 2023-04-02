@@ -1,8 +1,8 @@
+![Enigma Machine](https://repository-images.githubusercontent.com/618746584/10c2face-61d1-4319-9ec7-3944b0477dbb)
+
 # Enigma
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/enigma`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+An Enigma mechine simulator.
 
 ## Installation
 
