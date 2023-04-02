@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Enigma Web App</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Enigma Web App</h1>
+    </header>
+
+    <main>
+      <% if error_messages.any? %>
+        <h4>
+          <%= error_messages.join("<br>") %>
+        </h4>
+      <% end %>
+
+      <form method="get" action"/">
+        <p>
+          <table>
+            <thead>
+              <tr>
+                <th>Left Rotor</th>
+                <th>Middle Rotor</th>
+                <th>Right Rotor</th>
+                <th>Reflector</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <select name="left_rotor">
+                    <option <%= selected="selected" if left_rotor == "I" %> value="I">I</option>
+                    <option <%= selected="selected" if left_rotor == "II" %> value="II">II</option>
+                    <option <%= selected="selected" if left_rotor == "III" %> value="III">III</option>
+                    <option <%= selected="selected" if left_rotor == "IV" %> value="IV">IV</option>
+                    <option <%= selected="selected" if left_rotor == "V" %> value="V">V</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="middle_rotor">
+                    <option <%= selected="selected" if middle_rotor == "I" %> value="I">I</option>
+                    <option <%= selected="selected" if middle_rotor == "II" %> value="II">II</option>
+                    <option <%= selected="selected" if middle_rotor == "III" %> value="III">III</option>
+                    <option <%= selected="selected" if middle_rotor == "IV" %> value="IV">IV</option>
+                    <option <%= selected="selected" if middle_rotor == "V" %> value="V">V</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="right_rotor">
+                    <option <%= selected="selected" if right_rotor == "I" %> value="I">I</option>
+                    <option <%= selected="selected" if right_rotor == "II" %> value="II">II</option>
+                    <option <%= selected="selected" if right_rotor == "III" %> value="III">III</option>
+                    <option <%= selected="selected" if right_rotor == "IV" %> value="IV">IV</option>
+                    <option <%= selected="selected" if right_rotor == "V" %> value="V">V</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="reflector">
+                    <option <%= selected="selected" if reflector == "A" %> value="A">A</option>
+                    <option <%= selected="selected" if reflector == "B" %> value="B">B</option>
+                    <option <%= selected="selected" if reflector == "C" %> value="C">C</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </p>
+
+        <p>
+          <label>Message</label>
+          <textarea name="message" rows="6"><%= message %></textarea>
+        </p>
+
+        <button>Transcode</button>
+      </form>
+
+      <p>
+        <%= transcoded_message %>
+      </p>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+</html>

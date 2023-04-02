@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "enigma/reflector"
-require "enigma/rotor"
+require_relative "reflector"
+require_relative "rotor"
 
 class Machine
   def initialize
