@@ -4,9 +4,13 @@ require "enigma/reflector"
 require "enigma/rotor"
 
 class Machine
-  def initialize(rotors, reflector)
-    @reflector = Reflector.new(reflector)
+  def initialize
+    @reflector = nil
     @rotors = []
+  end
+
+  def configure(rotors, reflector)
+    @reflector = Reflector.new(reflector)
     rotors.each { |rotor_id| @rotors << Rotor.new(rotor_id) }
   end
 

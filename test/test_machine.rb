@@ -5,7 +5,8 @@ require "enigma/machine"
 
 class TestMachine < Minitest::Test
   def setup
-    @machine = Machine.new(%w[I II III], "A")
+    @machine = Machine.new
+    @machine.configure(%w[I II III], "A")
   end
 
   def test_encode_char_uppercase
